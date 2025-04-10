@@ -1,0 +1,64 @@
+## Dokumen SRS (Software Requirements Specification)  
+# Judul : Modul Manajemen Data Dosen
+
+# 1. Pendahuluan
+
+1.1 Tujuan Dokumen
+Dokumen ini bertujuan untuk menjelaskan spesifikasi kebutuhan perangkat lunak untuk Modul Manajemen Data Dosen. Modul ini merupakan bagian dari sistem informasi akademik yang membantu 
+admin dalam mengelola informasi dosen secara efektif, efisien, dan aman.
+
+1.2 Lingkup Sistem
+Sistem ini memungkinkan pengguna dengan hak akses sebagai admin untuk:
+- Menambahkan data dosen baru
+- Memperbarui data dosen yang sudah ada
+- Menghapus data dosen yang tidak lagi aktif
+- Menampilkan daftar lengkap data dosen yang tersimpan dalam database
+
+Sistem akan dikembangkan sebagai aplikasi berbasis web yang dapat diakses melalui browser, dan mengutamakan kemudahan penggunaan serta keamanan data.
+
+1.3 Definisi, Akronim, dan Singkatan
+- Admin : Pengguna dengan hak akses penuh untuk mengelola data.
+- Dosen : Tenaga pendidik di institusi yang datanya dikelola.
+- CRUD  : Create, Read, Update, Delete (operasi dasar pengelolaan data).
+- SRS   : Software Requirements Specification.
+
+# 2. Kebutuhan Fungsional
+- F1 : Admin dapat login ke dalam sistem menggunakan username dan password.
+- F2 : Admin dapat melihat daftar semua dosen dalam tampilan tabel.
+- F3 : Admin dapat menambahkan data dosen melalui form input.
+- F4 : Admin dapat mengedit informasi dosen tertentu.
+- F5 : Admin dapat menghapus data dosen yang tidak aktif atau tidak relevan.
+- F6 : Sistem memverifikasi data sebelum disimpan (validasi form).
+- F7 : Sistem menampilkan notifikasi jika operasi berhasil atau gagal.
+
+# 3. Kebutuhan Non-Fungsional
+- N1  : Kinerja
+  Sistem harus mampu merespons tindakan pengguna (klik, input, dll.) dalam waktu kurang dari 2 detik.
+- N2  : Keamanan
+  Hanya admin yang dapat mengakses dan mengelola data dosen. Otentikasi diperlukan saat login.
+- N3  : Aksesibilitas  
+  Aplikasi dapat diakses melalui berbagai browser modern (Chrome, Firefox, Edge).
+- N4  : Keandalan 
+  Sistem harus memiliki tingkat ketersediaan (availability) minimal 99% selama jam kerja.
+- N5  : Skalabilitas  
+  Sistem harus dapat menangani setidaknya 1000 entri data dosen tanpa penurunan performa.
+
+# 4. Antarmuka Pengguna
+
+4.1 Halaman Login
+- Komponen: Field username & password, tombol "Login".
+- Fitur: Validasi input, pesan kesalahan jika login gagal.
+
+4.2 Halaman Dashboard Admin
+- Terdapat menu untuk mengakses modul manajemen data dosen.
+- Menampilkan ringkasan total data dosen.
+
+4.3 Halaman Manajemen Data Dosen
+- Tabel List Dosen  
+  - Kolom: Nama, NIDN, Email, Fakultas, Aksi (Edit, Hapus)
+  - Fitur pencarian dan filter
+- Form Tambah/Ubah Dosen  
+  - Field: Nama, NIDN, Email, Fakultas, No HP, Alamat
+  - Tombol Simpan dan Batal
+- Notifikasi Sistem
+  - Misalnya "Data berhasil disimpan", "Data gagal diperbarui", dll.
