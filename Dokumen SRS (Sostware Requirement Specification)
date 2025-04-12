@@ -1,0 +1,84 @@
+B. Dokumen Software Requirement Specification (SRS) Modul Manajemen Data Dosen
+
+# 1. Pendahuluan
+
+1.1 Tujuan
+Dokumen ini bertujuan untuk mendefinisikan kebutuhan spesifikasi perangkat lunak untuk modul manajemen data dosen dalam sistem informasi akademik berbasis web. Sistem ini dirancang untuk 
+membantu pengelolaan data dosen secara efisien, terstruktur, dan aman.
+
+1.2 Ruang Lingkup
+odul ini mencakup fitur utama sebagai berikut:
+- Pengelolaan data dosen (CRUD).
+- Penyimpanan dan pencarian data dosen.
+- Penyajian laporan data dosen berbasis web.
+- Integrasi dengan modul lain dan API eksternal (jika ada).
+
+1.3 Definisi, Akronim, dan Singkatan
+- CRUD: Create, Read, Update, Delete
+- API: Application Programming Interface
+- RBAC: Role-Based Access Control
+
+1.4 Referensi
+- IEEE Std 830-1998: Standard for Software Requirements Specification.
+- Yii2 Framework Documentation
+- Standar keamanan data ISO 27001
+
+1.5 Gambaran Umum Dokumen
+Dokumen ini memuat deskripsi umum sistem, kebutuhan fungsional dan non-fungsional, spesifikasi antarmuka, serta lampiran teknis untuk pengembangan.
+
+# 2. Deskripsi Umum
+
+2.1 Perspektif Produk
+Modul akan diintegrasikan dalam sistem informasi akademik sebagai submodul. Sistem berbasis web dengan arsitektur client-server, backend menggunakan Yii2 Framework dan MySQL.
+
+2.2 Fungsi-Fungsi Produk
+- CRUD data dosen.
+- Filter dan pencarian berdasarkan nama, NIDN, jurusan, status.
+- Ekspor data dosen ke PDF/Excel.
+- Laporan jumlah dosen berdasarkan kategori tertentu.
+- Validasi data otomatis.
+
+2.3 Karakteristik Pengguna
+- **Admin:** Mengelola data dosen dan kontrol penuh atas sistem.
+- **Operator Kepegawaian:** Menginput dan memperbarui data dosen.
+
+2.4 Batasan Sistem
+- Akses via browser modern (Chrome, Firefox, Edge).
+- Dapat diakses oleh minimal 1000 pengguna serentak.
+- Data tersimpan dalam database MySQL.
+- Hak akses diatur dengan RBAC.
+
+# 3. Kebutuhan Spesifik
+
+3.1 Kebutuhan Fungsional
+- F01  : Pengguna dapat menambahkan data dosen baru.
+- F02  : Pengguna dapat mengubah data dosen.
+- F03  : Pengguna dapat menghapus data dosen.
+- F04  : Pengguna dapat mencari data dosen berdasarkan kriteria tertentu.
+- F05  : Sistem menyediakan fitur ekspor data ke format PDF dan Excel.
+- F06  : Sistem menampilkan statistik jumlah dosen per jurusan/status.
+
+3.2 Kebutuhan Non-Fungsional
+- NF01 : Respon sistem < 2 detik untuk setiap permintaan.
+- NF02 : Sistem dapat menangani 1000 pengguna bersamaan.
+- NF03 : Enkripsi data menggunakan AES-256.
+- NF04 : UI responsif dan mendukung mobile.
+
+3.3 Antarmuka Pengguna
+- Halaman login.
+- Dashboard dosen.
+- Formulir input/edit dosen.
+- Laporan visual.
+
+3.4 Antarmuka Perangkat Keras
+- Minimal RAM 8GB, CPU Quad-Core, SSD 100GB.
+
+3.5 Antarmuka Perangkat Lunak
+- Backend: Yii2 Framework
+- Database: MySQL
+- RESTful API untuk integrasi eksternal
+
+# 4. Lampiran
+- Diagram arsitektur modul
+- Contoh wireframe halaman data dosen
+- Daftar endpoint API (jika digunakan)
