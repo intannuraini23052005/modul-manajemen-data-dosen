@@ -25,8 +25,7 @@ Sistem informasi ini dirancang untuk mengelola data dosen dengan fitur utama sep
 2.1 Diagram Arsitektur Sistem
 Diagram berikut menggambarkan arsitektur sistem berbasis MVC (Model-View-Controller) yang digunakan pada sistem manajemen data dosen.
 
-![Diagram Arsitektur Sistem](./A_flowchart_diagram_titled_"Desain_Arsitektur_Sist.png)
-
+![Diagram Arsitektur Sistem](./A_flowchart_diagram_titled_"arsitektur.png.jpeg)
 2.2 Komponen Utama Sistem
 - Frontend   : HTML, CSS, JavaScript
 - Backend    : PHP dengan framework Laravel
